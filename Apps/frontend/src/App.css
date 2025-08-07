@@ -1,42 +1,164 @@
+@import "tailwindcss";
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  justify-self: left;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.formulario_login {
+  background-color: #8F8F8F;
+  place-items: center;
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Pantallas 4K */
+@media (min-width: 2560px) {
+  .formulario_login {
+    padding: 220px;
+    border-radius: 5px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Pantallas grandes */
+@media (min-width: 1281px) and (max-width: 2559px) {
+  .formulario_login {
+    padding: 100px;
+    border-radius: 5px;
   }
 }
 
-.card {
-  padding: 2em;
+/* Tablets */
+@media (min-width: 601px) and (max-width: 767px) {
+  .formulario_login {
+    padding: 80px;
+    border-radius: 5px;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+/* Teléfonos */
+@media (min-width: 320px) {
+  .formulario_login {
+    padding: 40px;
+    border-radius: 5px;
+  }
+
+  .btn_loging {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    position: relative;
+    border: 2px solid #B0B4B9;
+    color: #414141;
+    background-color: #B0B4B9;
+    z-index: 1;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088);
+  }
+
+  .btn_loging::before {
+    border-radius: 4px;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: -1;
+    background: #3A7FCE;
+    transition: .5s all ease;
+  }
+
+  .btn_loging:hover {
+    color: #e2e2e2;
+    border: 2px solid #3A7FCE;
+  }
+
+  .btn_loging:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+  .usr,
+  .pwd {
+    all: unset;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088);
+    transition: border 0.3s ease-in-out;
+    background-color: #B0B4B9;
+  }
+
+  .usr:focus,
+  .pwd:focus {
+    border-color: #4187E4;
+  }
+}
+
+/* Teléfonos horizontales*/
+@media (max-width: 767px) and (orientation: landscape) {
+  .formulario_login {
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .btn_loging {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    position: relative;
+    border: 2px solid #B0B4B9;
+    color: #414141;
+    background-color: #B0B4B9;
+    z-index: 1;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088);
+  }
+
+  .btn_loging::before {
+    border-radius: 4px;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    opacity: 0;
+    z-index: -1;
+    background: #3A7FCE;
+    transition: .5s all ease;
+  }
+
+  .btn_loging:hover {
+    color: #e2e2e2;
+    border: 2px solid #3A7FCE;
+  }
+
+  .btn_loging:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+
+  .usr,
+  .pwd {
+    all: unset;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.088);
+    transition: border 0.3s ease-in-out;
+    background-color: #B0B4B9;
+  }
+
+  .usr:focus,
+  .pwd:focus {
+    border-color: #4187E4;
+  }
 }
