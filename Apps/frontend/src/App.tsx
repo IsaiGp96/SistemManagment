@@ -1,10 +1,11 @@
 import './App.css'
-import Home from './pages/Home.js';
+import Login from './pages/Login.tsx';
+
 
 function App() {
   return (
     <>
-      <Home />
+      <Login />
     </>
   )
 }
